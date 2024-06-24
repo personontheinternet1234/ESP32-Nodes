@@ -28,6 +28,8 @@ void messageCb(const geometry_msgs::Twist& cmd_msg) {
   float angular_z = cmd_msg.angular.z;
   // Process the received velocities (linear_x, angular_z) here
   // For example, send these values to motor controllers
+  Serial.println(linear_x)
+  Serial.println(angular_z)
 }
 
 
@@ -61,4 +63,5 @@ void setup() {
 void loop() {
   nh.spinOnce();
   delay(10);
+  Serial.println("looped");
 }
